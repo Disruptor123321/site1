@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эта-Аквариды 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-blue: #0a0e2e;
+            --deep-space: #1a1c3a;
+            --star-white: #f0f0f0;
+            --meteor-orange: #ff7b25;
+            --meteor-blue: #25a2ff;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-blue);
+            color: var(--star-white);
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0.5px, transparent 1px),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0.5px, transparent 1px);
+            background-size: 50px 50px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 15px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, var(--meteor-orange), var(--meteor-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            z-index: 2;
+            padding: 0 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 100%;
+            margin: 0 auto 20px;
+            color: var(--star-white);
+            padding: 0 15px;
+        }
+        
+        .meteor {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.8);
+            animation: meteor 3s linear infinite;
+            opacity: 0;
+        }
+        
+        @keyframes meteor {
+            0% {
+                transform: translateX(0) translateY(0);
+                opacity: 1;
+            }
+            70% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateX(500px) translateY(300px);
+                opacity: 0;
+            }
+        }
+        
+        .info-card {
+            background-color: rgba(26, 28, 58, 0.7);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: var(--meteor-blue);
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+        
+        .highlight {
+            color: var(--meteor-orange);
+            font-weight: bold;
+        }
+        
+        .observation-tips {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .tip {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid var(--meteor-orange);
+        }
+        
+        .tip h3 {
+            margin-top: 0;
+            color: var(--meteor-blue);
+            font-size: 1.2rem;
+        }
+        
+        .event-date {
+            font-size: 1.4rem;
+            text-align: center;
+            margin: 30px 0;
+            font-weight: bold;
+            color: var(--meteor-orange);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .info-card {
+                padding: 15px;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            .event-date {
+                font-size: 1.2rem;
+                margin: 20px 0;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 30px 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div id="meteors-container"></div>
+            <h1>Эта-Аквариды 2025</h1>
+            <p class="subtitle">Пик одного из самых красивых метеорных потоков в ночь с 5 на 6 мая</p>
+        </header>
+        
+        <div class="event-date">
+            Пик активности: <span class="highlight">5-6 мая 2025 года</span>
+        </div>
+        
+        <div class="info-card">
+            <h2>О метеорном потоке</h2>
+            <p>Метеорный поток <span class="highlight">Эта-Аквариды</span> лучше всего наблюдать в Южном полушарии, но его также можно увидеть в регионах до 40° северной широты.</p>
+            <p>В <span class="highlight">2025 году</span> пик потока придется на ночь с <span class="highlight">5 на 6 мая</span>. В это время можно увидеть до <span class="highlight">50 метеоров в час</span>.</p>
+            <p>Радиант Эта-Акварид поднимается из-за горизонта в предрассветные часы и достигает наивысшей точки на небе около <span class="highlight">8 утра</span> по местному времени.</p>
+            <p>Метеоры Эта-Акварид известны тем, что оставляют после себя на небе <span class="highlight">медленно исчезающие следы</span>.</p>
+        </div>
+        
+        <div class="info-card">
+            <h2>Советы по наблюдению</h2>
+            <div class="observation-tips">
+                <div class="tip">
+                    <h3>Лучшее время</h3>
+                    <p>Наблюдайте с 3 до 5 часов утра по местному времени, когда радиант потока достаточно высоко над горизонтом.</p>
+                </div>
+                <div class="tip">
+                    <h3>Место наблюдения</h3>
+                    <p>Выберите место вдали от городских огней с открытым видом на восточную часть неба.</p>
+                </div>
+                <div class="tip">
+                    <h3>Как наблюдать</h3>
+                    <p>Не нужен телескоп - метеоры видны невооруженным глазом. Просто лягте на шезлонг или одеяло и смотрите в небо.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 Наблюдение за Эта-Акваридами | Сайт создан для любителей астрономии</p>
+    </footer>
+    
+    <script>
+        function createMeteors() {
+            const container = document.getElementById('meteors-container');
+            for (let i = 0; i < 5; i++) {
+                const meteor = document.createElement('div');
+                meteor.classList.add('meteor');
+                meteor.style.left = Math.random() * 100 + 'vw';
+                meteor.style.top = Math.random() * 100 + 'vh';
+                meteor.style.animationDelay = Math.random() * 5 + 's';
+                meteor.style.animationDuration = 2 + Math.random() * 4 + 's';
+                container.appendChild(meteor);
+            }
+        }
+        
+        window.onload = function() {
+            createMeteors();
+        };
+    </script>
+</body>
+</html>
